@@ -1,0 +1,79 @@
+﻿@model RegisterDTO
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Register</h4>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Register">
+                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>            
+
+                            <div class="form-group">
+                                <label asp-for="UserName" class="control-label"></label>
+                                <input asp-for="UserName" class="form-control" placeholder="User Name" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MailAddress" class="control-label"></label>
+                                <input asp-for="MailAddress" class="form-control" placeholder="Email" />
+                                <span asp-validation-for="MailAddress" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" placeholder="First Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" placeholder="Address" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CreditCardNumber" class="control-label"></label>
+                                <input asp-for="CreditCardNumber" class="form-control" placeholder="Card Number" />
+                                <span asp-validation-for="CreditCardNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CardExpiryDate" class="control-label"></label>
+                                <input asp-for="CardExpiryDate" class="form-control" placeholder="Expire Date" />
+                                <span asp-validation-for="CardExpiryDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CvcCode" class="control-label"></label>
+                                <input asp-for="CvcCode" class="form-control" placeholder="Cvc Code" />
+                                <span asp-validation-for="CvcCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Phone" class="control-label"></label>
+                                <input asp-for="Phone" class="form-control" placeholder="Phone Number" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-sm btn-success float-right" value="Register" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="LogIn" class="btn btn-block btn-dark">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
